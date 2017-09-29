@@ -12,7 +12,7 @@ public class FortuneCookieGenerator {
 	private String[] words;
 	
 	@Value("${length}")
-	private int sentenceLength;
+	private int fortuneLength;
 
 	public void generate() {
 		
@@ -21,7 +21,7 @@ public class FortuneCookieGenerator {
 		int wordsInSentence = 0;
 		StringBuilder randomSentenceStringBuilder = new StringBuilder();
 		
-		while(sentenceLength != wordsInSentence) {
+		while(fortuneLength != wordsInSentence) {
 			int pos = random.nextInt(words.length);
 			String word = words[pos];
 			randomSentenceStringBuilder.append(word).append(" ");
