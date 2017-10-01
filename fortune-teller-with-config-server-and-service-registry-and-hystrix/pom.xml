@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>cf.developers</groupId>
-	<artifactId>fortune-teller-with-config-server</artifactId>
+	<artifactId>fortune-teller-with-config-server-and-service-registry-and-hystrix</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>fortune-teller-with-config-server</name>
-	<description>CF For Developers - Fortune Teller Worker Application</description>
+	<name>fortune-teller-with-config-server-and-service-registry-and-hystrix</name>
+	<description>CF For Developers - Fortune Teller Worker Application with Config Server, Service Registry and Hystrix</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -41,6 +41,18 @@
 			<groupId>io.pivotal.spring.cloud</groupId>
 			<artifactId>
 				spring-cloud-services-starter-config-client
+			</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.pivotal.spring.cloud</groupId>
+			<artifactId>
+				spring-cloud-services-starter-service-registry
+			</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.pivotal.spring.cloud</groupId>
+			<artifactId>
+				spring-cloud-services-starter-circuit-breaker
 			</artifactId>
 		</dependency>
 	</dependencies>

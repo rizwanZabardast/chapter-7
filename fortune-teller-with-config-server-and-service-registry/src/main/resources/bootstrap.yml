@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: fortune-teller
+
+eureka:
+  instance:
+    prefer-ip-address: true

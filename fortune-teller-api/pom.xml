@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>cf.developers</groupId>
-	<artifactId>fortune-teller-with-config-server</artifactId>
+	<artifactId>fortune-teller-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>fortune-teller-with-config-server</name>
-	<description>CF For Developers - Fortune Teller Worker Application</description>
+	<name>fortune-teller-api</name>
+	<description>CF For Developers - Fortune Teller Web Application</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -28,8 +28,14 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<groupId>io.pivotal.spring.cloud</groupId>
+			<artifactId>spring-cloud-services-starter-service-registry</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.maximeroussy</groupId>
+			<artifactId>invitrode</artifactId>
+			<version>1.0.10</version>
 		</dependency>
 
 		<dependency>
@@ -38,22 +44,10 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>io.pivotal.spring.cloud</groupId>
-			<artifactId>
-				spring-cloud-services-starter-config-client
-			</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
 
 	<dependencyManagement>
 		<dependencies>
@@ -73,4 +67,22 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
+	<repositories>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
 </project>
