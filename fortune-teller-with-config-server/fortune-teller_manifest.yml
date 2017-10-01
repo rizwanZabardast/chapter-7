@@ -1,0 +1,10 @@
+applications:
+- name: fortune-teller
+  disk_quota: 512M
+  health-check-type: process
+  instances: 1
+  memory: 256M
+  no-route: true
+  services:
+  - config-server
+  stack: cflinuxfs2
